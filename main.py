@@ -8,7 +8,7 @@ path_dir_out = "Color"
 PATH_IN = os.path.join(os.getcwd(), path_dir_in)
 PATH_OUT = os.path.join(os.getcwd(), path_dir_out)
 
-for i, file in enumerate(os.listdir(PATH_IN)):
+for i, file in enumerate(sorted(os.listdir(PATH_IN))):
     # Read image as grayscale
     path = os.path.join(PATH_IN, file)
     im_gray = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
